@@ -11,8 +11,8 @@ public class PinCode
 	public static void vaildatePinCode(String pincode)
 	{
 		
-		Pattern P = Pattern.compile(pinCodePattern);
-		Matcher matcher = P.matcher(pincode);
+		Pattern pattern = Pattern.compile(pinCodePattern);
+		Matcher matcher = pattern.matcher(pincode);
 		boolean matchFound = matcher.find();
 
 		if(matchFound) 
