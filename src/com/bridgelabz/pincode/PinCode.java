@@ -1,11 +1,41 @@
 package com.bridgelabz.pincode;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class PinCode 
 {
+	
+	static String pinCodePattern="[0-9]{6}";
+	
+	public static void vaildatePinCode(String pincode)
+	{
+		
+		Pattern P = Pattern.compile(pinCodePattern);
+		Matcher matcher = P.matcher(pincode);
+		boolean matchFound = matcher.find();
+
+		if(matchFound) 
+		{
+			System.out.println("Pin Code "+pincode+" is  valid");
+		} 
+		else
+		{
+			System.out.println("Pin Code "+pincode+" is not valid");
+		}
+		
+		
+	}
 
 	public static void main(String[] args) 
 	{
 		System.out.println("welcome to pincode problem");
+		
+		vaildatePinCode("400088");
+		
+		
+		
+		
 
 	}
 
