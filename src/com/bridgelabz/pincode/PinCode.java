@@ -3,10 +3,11 @@ package com.bridgelabz.pincode;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class PinCode 
 {
 	
-	static String pinCodePattern="^[0-9]{6}$";
+	static String pinCodePattern="[0-9]{3}[ ]?[0-9]{3}$";
 	
 	public static void vaildatePinCode(String pincode)
 	{
@@ -34,6 +35,7 @@ public class PinCode
 		vaildatePinCode("400088");
 		vaildatePinCode("A40088");
 		vaildatePinCode("400088B");
+		vaildatePinCode("400 088");
 		
 		
 		
