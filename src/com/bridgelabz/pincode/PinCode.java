@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class PinCode 
 {
 	
-	static String pinCodePattern="^[0-9]{6}";
+	static String pinCodePattern="^[0-9]{6}$";
 	
 	public static void vaildatePinCode(String pincode)
 	{
@@ -33,6 +33,7 @@ public class PinCode
 		
 		vaildatePinCode("400088");
 		vaildatePinCode("A40088");
+		vaildatePinCode("400088B");
 		
 		
 		
